@@ -1,0 +1,13 @@
+.suggestionBar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: $colors-white-light;
+  box-shadow: $shadow-suggestion;
+}
+
+.postSuggestion {
+  display: flex;
+  align-items: center;
+  margin: 1rem 3rem 0 3rem;
+}

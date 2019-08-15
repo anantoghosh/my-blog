@@ -1,0 +1,28 @@
+.link {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  height: 60px;
+
+  img {
+    margin-bottom: 0;
+    max-height: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 1.1rem;
+  align-items: center;
+  a {
+    color: $colors-white-base;
+    margin-left: 2rem;
+    transition: all $transitions-default-duration;
+    &:hover {
+      color: $colors-white-grey;
+    }
+  }
+}

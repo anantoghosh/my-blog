@@ -1,0 +1,18 @@
+.link {
+  color: $colors-white-light;
+  padding: 5px 10px;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  &:hover {
+    color: $colors-black-blue;
+    background: $colors-white-light;
+  }
+}
+
+.information {
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+}

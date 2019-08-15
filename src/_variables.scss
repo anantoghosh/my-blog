@@ -1,0 +1,89 @@
+// Colors
+
+$colors-white-base: #fff;
+$colors-white-light: #f0f0f0;
+$colors-white-grey: #cecece;
+$colors-white-dark: #a0afd7;
+
+$colors-black-base: #333438;
+$colors-black-light: #4b4e57;
+$colors-black-blue: #2e3246;
+
+$colors-primary-base: #3498db;
+$colors-primary-light: #3e5fbc;
+$colors-primary-dark: #284187;
+
+$colors-background-light: #3e5fbc;
+$colors-background-dark: #284187;
+
+$colors-link: $colors-primary-base;
+$colors-link-hover: $colors-primary-dark;
+
+// Breakpoints
+
+$breakpoint-xs: 400px;
+$breakpoint-s: 600px;
+$breakpoint-m: 900px;
+$breakpoint-l: 1200px;
+
+// Layout
+
+$layout-article: '46rem';
+$layout-base: '70rem';
+$layout-big: '83.33333rem';
+
+// Gradients
+
+$gradient-leftToRight: linear-gradient(
+  -45deg,
+  #{$colors-background-light} 0%,
+  #{$colors-background-dark} 100%
+);
+
+$gradient-rightToLeft: linear-gradient(
+  45deg,
+  #{$colors-background-light} 0%,
+  #{$colors-background-dark} 100%
+);
+
+// Shadows
+
+$shadow-card: '0 20px 30px rgba(0, 0, 0, 0.1)';
+$shadow-image: '0 15px 25px rgba(0, 0, 0, 0.1)';
+$shadow-suggestion: '0 -5px 30px rgba(0,0,0,0.2)';
+$shadow-footer: '0 -3px 26px rgba(0,0,0,0.5)';
+$shadow-feature-big-default: '0 40px 40px rgba(0, 0, 0, 0.2)';
+$shadow-feature-big-hover: '0 50px 50px rgba(0, 0, 0, 0.1)';
+$shadow-feature-small-default: '0 15px 25px rgba(0, 0, 0, 0.2)';
+$shadow-feature-small-hover: '0 40px 45px rgba(0, 0, 0, 0.1)';
+$shadow-text-small: '0 5px 10px rgba(0, 0, 0, 0.25)';
+$shadow-text-big: '0 15px 20px rgba(0, 0, 0, 0.13)';
+
+// Transitions
+
+$transition-easeInOutCubic: 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+$transition-easeOutBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+$transition-duration: '0.4s';
+
+$transitions-default-duration: $transition-duration;
+$transitions-default-timing: $transition-easeInOutCubic;
+$transitions-default-transition: all #{$transition-duration} #{$transition-easeInOutCubic};
+
+$transitions-boom-duration: $transition-duration;
+$transitions-boom-timing: $transition-easeOutBack;
+$transitions-boom-transition: all #{$transition-duration} #{$transition-easeOutBack};
+
+$transitions-headroom-transition: all 0.25s ease-in-out;
+
+// Border radius
+
+$border-radius-default: 0.4rem;
+$border-radius-round: 100rem;
+
+// Font
+
+$font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$font-body: 'Open Sans', #{$font-default};
+$font-heading: 'Candal', #{$font-default};

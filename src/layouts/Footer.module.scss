@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+  padding-top: 2rem;
+  bottom: 0;
+  box-shadow: $shadow-footer;
+  background: $gradient-leftToRight;
+  font-family: $font-body;
+  font-weight: 500;
+  @media (max-width: $breakpoint-s) {
+    padding-top: 7rem;
+  }
+}
+
+.text {
+  margin: 0;
+  padding-bottom: 2rem;
+  text-align: center;
+  color: $colors-white-light;
+}
