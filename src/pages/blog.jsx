@@ -31,6 +31,7 @@ export default Blog;
 Blog.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({

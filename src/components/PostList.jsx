@@ -17,7 +17,11 @@ const PostList = ({ cover, path, date, title, excerpt, tags }) => (
         {/* <p className={styles.excerpt}>{excerpt}</p> */}
         <div className={styles.tags}>
           {tags.map(tag => {
-            return <span key={tag} className={styles.tag}>{tag}</span>;
+            return (
+              <span key={tag} className={styles.tag}>
+                {tag}
+              </span>
+            );
           })}
         </div>
       </div>
@@ -28,6 +32,7 @@ const PostList = ({ cover, path, date, title, excerpt, tags }) => (
 export default PostList;
 
 PostList.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string),
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   excerpt: PropTypes.string,

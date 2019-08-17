@@ -4,20 +4,18 @@ import PropTypes from 'prop-types';
 import { Header } from 'components';
 import { Layout, Container } from 'layouts';
 
-const About = center => (
+const About = () => (
   <Layout>
     <Helmet title={'About'} />
-    <Header title="About">mein.in Ananto Ghosh's blog</Header>
-    <Container center={center}>
-      <h3>
-        Todo
-      </h3>
+    <Header title="About">mein.in Ananto Ghosh&#39;s blog</Header>
+    <Container>
+      <h3>Todo</h3>
     </Container>
   </Layout>
 );
 
 export default About;
 
-Container.propTypes = {
+About.propTypes = {
   center: PropTypes.object,
 };

@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 import styles from './Container.module.scss';
 
-const Container = ({ children, type, className, center }) => (
-  <div className={`${className} ${styles.wrapper}`} type={type} center={center}>
-    {children}
-  </div>
+const Container = ({ children, className }) => (
+  <div className={`${className} ${styles.wrapper}`}>{children}</div>
 );
 
 export default Container;

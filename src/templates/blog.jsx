@@ -32,8 +32,12 @@ const Blog = ({ pageContext, data }) => {
 export default Blog;
 
 Blog.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string,
+  }).isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
