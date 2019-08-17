@@ -1,6 +1,7 @@
 ---
 path: "/post-four"
 cover: '../default.jpg'
+description: 'This is something'
 date: "2018-10-18"
 title: "Post Number Four"
 tags: ['gatsby', 'other']

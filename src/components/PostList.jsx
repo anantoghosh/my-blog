@@ -14,7 +14,7 @@ const PostList = ({ cover, path, date, title, excerpt, tags }) => (
       <div className={styles.info}>
         <h2 className={styles.title}>{title}</h2>
         <span>{date}</span>
-        {/* <p className={styles.excerpt}>{excerpt}</p> */}
+        <p className={styles.excerpt}>{excerpt}</p>
         <div className={styles.tags}>
           {tags.map(tag => {
             return (

@@ -22,7 +22,7 @@ const Blog = ({ pageContext, data }) => {
           title={node.frontmatter.title}
           date={node.frontmatter.date}
           tags={node.frontmatter.tags}
-          excerpt={node.excerpt}
+          excerpt={node.frontmatter.description}
         />
       ))}
     </Layout>
@@ -72,7 +72,8 @@ export const pageQuery = graphql`
             title
             path
             tags
-            date(formatString: "MM.DD.YYYY")
+            description
+            date(formatString: "DD-MMM-YYYY")
             cover {
               childImageSharp {
                 fluid(

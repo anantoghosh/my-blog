@@ -21,7 +21,7 @@ const Index = ({ data }) => {
             path={node.frontmatter.path}
             title={node.frontmatter.title}
             date={node.frontmatter.date}
-            excerpt={node.excerpt}
+            excerpt={node.frontmatter.description}
             tags={node.frontmatter.tags}
           />
         ))}
@@ -67,6 +67,7 @@ export const query = graphql`
             title
             path
             tags
+            description
             date(formatString: "DD-MMM-YYYY")
             cover {
               childImageSharp {

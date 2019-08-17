@@ -20,6 +20,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
                   path
                   title
                   tags
+                  description
                 }
               }
             }

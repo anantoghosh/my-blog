@@ -1,6 +1,7 @@
 ---
 path: "/post-two"
 cover: '../default.jpg'
+description: 'This is something'
 date: "2018-10-16"
 title: "Post Number Two"
 published: true
