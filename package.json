@@ -12,7 +12,7 @@
     "url": "https://github.com/anantoghosh/my-blog"
   },
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "rm -rf public && rm -rf .cache",
