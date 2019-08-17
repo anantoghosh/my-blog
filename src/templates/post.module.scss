@@ -4,10 +4,19 @@
   justify-content: space-between;
   background: $colors-white-light;
   box-shadow: $shadow-suggestion;
+  padding: 20px;
 }
 
 .postSuggestion {
   display: flex;
   align-items: center;
-  margin: 1rem 3rem 0 3rem;
+}
+
+.next {
+  text-align: right;
+}
+
+.suggestTitle {
+  font-family: $font-heading;
+  font-size: calc(1rem + 1vw);
 }

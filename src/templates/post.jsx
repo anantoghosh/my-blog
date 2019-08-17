@@ -36,7 +36,7 @@ const Post = ({ data, pageContext }) => {
             </Link>
           )}
         </div>
-        <div className={styles.postSuggestion}>
+        <div className={`${styles.postSuggestion} ${styles.next}`}>
           {next && (
             <Link to={next.frontmatter.path}>
               Next
