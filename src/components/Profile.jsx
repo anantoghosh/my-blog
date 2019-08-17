@@ -36,11 +36,7 @@ const Profile = () => {
           >
             <img src={github} alt="" className={styles.icon} />
           </a>
-          <a
-            href="http://github.com/anantoghosh"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
             <img src={rss} alt="" className={styles.icon} />
           </a>
         </div>
