@@ -1,0 +1,54 @@
+.Profile {
+  color: #fff;
+}
+
+.name {
+  font-family: $font-heading;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-family: $font-body;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 80px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.text {
+  padding: 0 20px;
+  flex-shrink: 3;
+  flex-basis: 50%;
+  min-width: 100px;
+  flex-grow: 1;
+}
+
+.icon {
+  padding: 0 10px;
+  opacity: 0.8;
+  margin: 0;
+  height: 50px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.social {
+  display: flex;
+  flex-shrink: 0;
+  padding-top: 20px;
+}
+
+.thanks {
+  font-weight: bold;
+}
