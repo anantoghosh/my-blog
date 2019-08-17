@@ -1,38 +1,43 @@
 const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('src/templates/post.jsx');
+    const blogTemplate = path.resolve('src/templates/blog.jsx');
     const tagPage = path.resolve('src/templates/tags.jsx');
     const tagPosts = path.resolve('src/templates/tag.jsx');
 
     resolve(
-      graphql(
-        `
-          query {
-            allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
-            ) {
-              edges {
-                node {
-                  frontmatter {
-                    path
-                    title
-                    tags
-                  }
+      graphql(`
+        {
+          postsRemark: allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                frontmatter {
+                  path
+                  title
+                  tags
                 }
               }
             }
           }
-        `
-      ).then(result => {
+          tagsGroup: allMarkdownRemark(limit: 2000) {
+            group(field: frontmatter___tags) {
+              fieldValue
+            }
+          }
+        }
+      `).then(result => {
         if (result.errors) {
+          reporter.panicOnBuild('Error while running GraphQL query.');
           return reject(result.errors);
         }
 
-        const posts = result.data.allMarkdownRemark.edges;
+        const posts = result.data.postsRemark.edges;
 
         const postsByTag = {};
         // create tags page
@@ -48,28 +53,14 @@ exports.createPages = ({ graphql, actions }) => {
           }
         });
 
-        const tags = Object.keys(postsByTag);
+        const tags1 = Object.keys(postsByTag);
 
         createPage({
           path: '/tags',
           component: tagPage,
           context: {
-            tags: tags.sort(),
+            tags: tags1.sort(),
           },
-        });
-
-        //create tags
-        tags.forEach(tagName => {
-          const posts = postsByTag[tagName];
-
-          createPage({
-            path: `/tags/${tagName}`,
-            component: tagPosts,
-            context: {
-              posts,
-              tagName,
-            },
-          });
         });
 
         //create posts
@@ -85,6 +76,31 @@ exports.createPages = ({ graphql, actions }) => {
               pathSlug: path,
               prev,
               next,
+            },
+          });
+        });
+
+        //create tags
+        // tags.forEach(tagName => {
+        //   const posts = postsByTag[tagName];
+
+        //   createPage({
+        //     path: `/blog/${tagName}`,
+        //     component: blogTemplate,
+        //     context: {
+        //       tagName,
+        //     },
+        //   });
+        // });
+
+        const tags = result.data.tagsGroup.group;
+        // Make tag pages
+        tags.forEach(tag => {
+          createPage({
+            path: `/tags/${tag.fieldValue}/`,
+            component: blogTemplate,
+            context: {
+              tag: tag.fieldValue,
             },
           });
         });

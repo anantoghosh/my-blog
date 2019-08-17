@@ -5,12 +5,15 @@ import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
 
-const Blog = ({ data }) => {
+const Blog = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark;
+  const { tag } = pageContext;
+  const tagHeader = `Tagged with "${tag}"`;
+  const tagNumber = `${totalCount} post${totalCount === 1 ? '' : 's'}`;
   return (
     <Layout>
       <Helmet title={'Blog'} />
-      <Header title="All articles">{totalCount} posts</Header>
+      <Header title={tagHeader}>{tagNumber}</Header>
       {edges.map(({ node }) => (
         <BlogList
           key={node.id}
@@ -49,9 +52,13 @@ Blog.propTypes = {
   }),
 };
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+export const pageQuery = graphql`
+  query($tag: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
       totalCount
       edges {
         node {

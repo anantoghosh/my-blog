@@ -12,8 +12,8 @@ const Header = ({ children, title, date, cover }) => (
       </div>
     )}
     <div className={styles.text}>
-      <h1>{title}</h1>
-      <h3>{date}</h3>
+      <h1 className={styles.title}>{title}</h1>
+      {/* <div className={styles.date}>{date}</div> */}
 
       {children && <p className={styles.subTitle}>{children}</p>}
     </div>

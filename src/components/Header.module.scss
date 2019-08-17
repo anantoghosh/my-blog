@@ -17,6 +17,10 @@ $bannerHeight: 400px;
   }
 }
 
+.date {
+  font-size: 2rem;
+}
+
 .text {
   color: $colors-white-base;
   text-align: center;
@@ -38,7 +42,13 @@ $bannerHeight: 400px;
   height: $bannerHeight;
 }
 
-.subtitle {
+.title {
+  margin-bottom: 20px;
+}
+
+.subTitle {
   max-width: 650px;
+  font-size: 1.2rem;
   color: $colors-white-light;
+  font-family: $font-heading;
 }
