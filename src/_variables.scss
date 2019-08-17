@@ -9,11 +9,11 @@ $colors-black-base: #333438;
 $colors-black-light: #4b4e57;
 $colors-black-blue: #2e3246;
 
-$colors-primary-base: #3498db;
+$colors-primary-base: #3b67e6;
 $colors-primary-light: #3e5fbc;
 $colors-primary-dark: #284187;
 
-$colors-background-light: #3e5fbc;
+$colors-background-light: #3b67e6;
 $colors-background-dark: #284187;
 
 $colors-link: $colors-primary-base;
@@ -63,7 +63,7 @@ $shadow-text-big: '0 15px 20px rgba(0, 0, 0, 0.13)';
 
 $transition-easeInOutCubic: 'cubic-bezier(0.645, 0.045, 0.355, 1)';
 $transition-easeOutBack: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-$transition-duration: '0.4s';
+$transition-duration: '0.3s';
 
 $transitions-default-duration: $transition-duration;
 $transitions-default-timing: $transition-easeInOutCubic;

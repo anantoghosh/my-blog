@@ -29,12 +29,6 @@ h1 {
   flex-direction: row;
   width: 100%;
   padding: 1rem 1.5rem;
-  svg {
-    height: 2.5rem;
-    g {
-      fill: $colors-white-base;
-    }
-  }
 }
 
 .headroom--unfixed {
@@ -73,12 +67,8 @@ h1 {
   }
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  svg {
-    height: 2.5rem;
-    g {
-      fill: $colors-black-base;
-    }
-  }
+  background: #fff;
+
   span {
     color: $colors-black-base;
   }
