@@ -97,3 +97,20 @@
 .title {
   margin-bottom: 0.6rem;
 }
+
+.excerpt {
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.9rem;
+  background: $colors-primary-base;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-right: 20px;
+}
+
+.tags {
+  margin-top: 20px;
+}

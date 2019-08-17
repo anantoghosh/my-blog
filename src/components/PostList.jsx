@@ -5,16 +5,21 @@ import PropTypes from 'prop-types';
 
 import styles from './PostList.module.scss';
 
-const PostList = ({ cover, path, date, title, excerpt }) => (
+const PostList = ({ cover, path, date, title, excerpt, tags }) => (
   <article className={styles.wrapper}>
     <div className={styles.image}>
       <Img fluid={cover} />
     </div>
     <Link to={path} className={styles.link}>
       <div className={styles.info}>
-        <span>{date}</span>
         <h2 className={styles.title}>{title}</h2>
-        <span>{excerpt}</span>
+        <span>{date}</span>
+        {/* <p className={styles.excerpt}>{excerpt}</p> */}
+        <div className={styles.tags}>
+          {tags.map(tag => {
+            return <span key={tag} className={styles.tag}>{tag}</span>;
+          })}
+        </div>
       </div>
     </Link>
   </article>
