@@ -2,12 +2,21 @@
 
 a {
   color: $colors-link;
-  transition: color 0.5s;
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: $font-heading;
+}
+
+body {
+  font-family: $font-default;
 }
 
 #gatsby-focus-wrapper {
@@ -73,4 +82,3 @@ h1 {
     color: $colors-black-base;
   }
 }
-
