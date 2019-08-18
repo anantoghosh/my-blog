@@ -18,7 +18,7 @@ const Profile = () => {
             Everyday Coder. If you like what you read, follow me on twitter or
             subscribe to the rss feed.
             <br />
-            <div className={styles.thanks}>Please and thank you.</div>
+            <span className={styles.thanks}>Please and thank you.</span>
           </p>
         </div>
         <div className={styles.social}>

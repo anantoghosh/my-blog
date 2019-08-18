@@ -2,15 +2,21 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Header, BlogList } from 'components';
+import { Header, BlogList, TagsBlock } from 'components';
 import { Layout } from 'layouts';
 
 const Blog = ({ data }) => {
   const { edges, totalCount } = data.allMarkdownRemark;
+  const tags = [];
+  data.tagsGroup.group.forEach(tag => {
+    tags.push(tag.fieldValue);
+  });
+  console.log(tags);
   return (
     <Layout>
       <Helmet title={'Blog'} />
       <Header title="All articles">{totalCount} posts</Header>
+      <TagsBlock list={tags} />
       {edges.map(({ node }) => (
         <BlogList
           key={node.id}
@@ -47,6 +53,9 @@ Blog.propTypes = {
         }).isRequired
       ),
     }),
+    tagsGroup: PropTypes.shape({
+      group: PropTypes.arrayOf(PropTypes.string),
+    }),
   }),
 };
 
@@ -77,6 +86,11 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+    tagsGroup: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
       }
     }
   }
