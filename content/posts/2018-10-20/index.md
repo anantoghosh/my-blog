@@ -3,7 +3,7 @@ path: '/post-six'
 cover: '../default.jpg'
 description: 'This is something'
 date: '2018-10-20'
-title: 'Post Number Six'
+title: 'Really long title test, this should keep working as intended'
 tags: ['gatsby', 'tutorial']
 published: true
 ---

@@ -1,9 +1,9 @@
 ---
 path: "/post-five"
 cover: '../default.jpg'
-description: 'This is something'
+description: 'Really long description test, this should keep working as intended. Let see what happens in such cases.'
 date: "2018-10-19"
-title: "Post Number Five"
+title: "Really long title test, this should keep working as intended part 2"
 tags: ['tutorial', 'javascript', 'frontend']
 published: true
 ---

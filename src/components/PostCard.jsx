@@ -3,17 +3,25 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import styles from './PostList.module.scss';
+import styles from './PostCard.module.scss';
 
-const PostList = ({ cover, path, date, title, excerpt, tags }) => (
-  <article className={styles.wrapper}>
-    <div className={styles.image}>
-      <Img fluid={cover} />
-    </div>
+const PostCard = ({
+  cover,
+  path,
+  date,
+  title,
+  excerpt,
+  tags,
+  className = '',
+}) => (
+  <article className={`${styles.wrapper} ${className}`}>
     <Link to={path} className={styles.link}>
+      <div className={styles.imageContainer}>
+        <Img fluid={cover} className={styles.image} />
+      </div>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.info}>
-        <h2 className={styles.title}>{title}</h2>
-        <span>{date}</span>
+        <span className={styles.date}>{date}</span>
         <p className={styles.excerpt}>{excerpt}</p>
         <div className={styles.tags}>
           {tags.map(tag => {
@@ -29,13 +37,14 @@ const PostList = ({ cover, path, date, title, excerpt, tags }) => (
   </article>
 );
 
-export default PostList;
+export default PostCard;
 
-PostList.propTypes = {
+PostCard.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   excerpt: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };

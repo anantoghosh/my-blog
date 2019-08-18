@@ -1,7 +1,7 @@
 import BlogList from './BlogList';
 import Header from './Header';
-import PostList from './PostList';
+import PostCard from './PostCard';
 import SEO from './SEO';
 import TagsBlock from './TagsBlock';
 
-export { BlogList, Header, PostList, SEO, TagsBlock };
+export { BlogList, Header, PostCard, SEO, TagsBlock };

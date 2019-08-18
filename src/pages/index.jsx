@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Header, PostList } from 'components';
+import { Header, PostCard } from 'components';
 import { Layout } from 'layouts';
 
 import styles from './index.module.scss';
@@ -15,7 +15,7 @@ const Index = ({ data }) => {
       <Header title="Ananto Ghosh">Articles about simple tech</Header>
       <div className={styles.postWrapper}>
         {edges.map(({ node }) => (
-          <PostList
+          <PostCard
             key={node.id}
             cover={node.frontmatter.cover.childImageSharp.fluid}
             path={node.frontmatter.path}
