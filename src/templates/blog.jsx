@@ -1,9 +1,11 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
+
+import styles from './blog.module.scss';
 
 const Blog = ({ pageContext, data }) => {
   const { edges, totalCount } = data.allMarkdownRemark;
@@ -14,6 +16,9 @@ const Blog = ({ pageContext, data }) => {
     <Layout>
       <Helmet title={'Blog'} />
       <Header title={tagHeader}>{tagNumber}</Header>
+      <div className={styles.button}>
+        <Link to="/blog">↼ View All Articles</Link>
+      </div>
       <PostList posts={edges} />
     </Layout>
   );
