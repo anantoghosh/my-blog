@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Header, BlogList, TagsBlock } from 'components';
+import { Header, PostList, TagsBlock } from 'components';
 import { Layout } from 'layouts';
 
 const Blog = ({ data }) => {
@@ -11,23 +11,13 @@ const Blog = ({ data }) => {
   data.tagsGroup.group.forEach(tag => {
     tags.push(tag.fieldValue);
   });
-  console.log(tags);
+
   return (
     <Layout>
       <Helmet title={'Blog'} />
       <Header title="All articles">{totalCount} posts</Header>
       <TagsBlock list={tags} />
-      {edges.map(({ node }) => (
-        <BlogList
-          key={node.id}
-          cover={node.frontmatter.cover.childImageSharp.fluid}
-          path={node.frontmatter.path}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          tags={node.frontmatter.tags}
-          excerpt={node.frontmatter.description}
-        />
-      ))}
+      <PostList posts={edges} />
     </Layout>
   );
 };

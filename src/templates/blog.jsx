@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import { Header, BlogList } from 'components';
+import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
 
 const Blog = ({ pageContext, data }) => {
@@ -14,17 +14,7 @@ const Blog = ({ pageContext, data }) => {
     <Layout>
       <Helmet title={'Blog'} />
       <Header title={tagHeader}>{tagNumber}</Header>
-      {edges.map(({ node }) => (
-        <BlogList
-          key={node.id}
-          cover={node.frontmatter.cover.childImageSharp.fluid}
-          path={node.frontmatter.path}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          tags={node.frontmatter.tags}
-          excerpt={node.frontmatter.description}
-        />
-      ))}
+      <PostList posts={edges} />
     </Layout>
   );
 };
