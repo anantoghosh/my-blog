@@ -31,6 +31,7 @@ h5 {
   width: 100%;
   z-index: 2000;
   top: 0;
+  transform: translateY(-100%);
 }
 
 .headroom {
@@ -43,7 +44,7 @@ h5 {
 
 .headroom--unfixed {
   position: relative;
-  transform: translateY(0);
+  transform: translateY(100%);
   transition: $transitions-headroom-transition;
 }
 
@@ -59,7 +60,7 @@ h5 {
 
 .headroom--pinned {
   position: fixed;
-  transform: translateY(0);
+  transform: translateY(100%);
   transition: $transitions-headroom-transition;
   background-color: $colors-white-light;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
