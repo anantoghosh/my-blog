@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Header, PostCard } from 'components';
-import { Layout } from 'layouts';
+import { Layout, Container } from 'layouts';
 
 import styles from './index.module.scss';
 
@@ -13,19 +13,25 @@ const Index = ({ data }) => {
     <Layout>
       <Helmet title={'Home'} />
       <Header title="Ananto Ghosh">Articles about simple tech</Header>
-      <div className={styles.postWrapper}>
-        {edges.map(({ node }) => (
-          <PostCard
-            key={node.id}
-            cover={node.frontmatter.cover.childImageSharp.fluid}
-            path={node.frontmatter.path}
-            title={node.frontmatter.title}
-            date={node.frontmatter.date}
-            excerpt={node.frontmatter.description}
-            tags={node.frontmatter.tags}
-          />
-        ))}
-      </div>
+      <section>
+        <h2 className={styles.title}>Recent Articles</h2>
+        <div className={styles.postWrapper}>
+          {edges.map(({ node }) => (
+            <PostCard
+              key={node.id}
+              cover={node.frontmatter.cover.childImageSharp.fluid}
+              path={node.frontmatter.path}
+              title={node.frontmatter.title}
+              date={node.frontmatter.date}
+              excerpt={node.frontmatter.description}
+              tags={node.frontmatter.tags}
+            />
+          ))}
+        </div>
+        <div className={styles.button}>
+          <Link to="/blog">View All Articles</Link>
+        </div>
+      </section>
     </Layout>
   );
 };
