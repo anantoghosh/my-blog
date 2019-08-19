@@ -51,3 +51,12 @@
 .thanks {
   font-weight: bold;
 }
+
+.link {
+  color: $colors-white-light;
+  text-decoration: underline;
+
+  &:hover {
+    color: #fff;
+  }
+}

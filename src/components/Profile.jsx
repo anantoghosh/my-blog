@@ -6,6 +6,7 @@ import logo from '../../static/logo/logo.png';
 import twitter from '../../static/twitter.svg';
 import github from '../../static/github.svg';
 import rss from '../../static/rss.svg';
+import { Link } from 'gatsby';
 
 const Profile = () => {
   return (
@@ -16,9 +17,11 @@ const Profile = () => {
           <header className={styles.name}>Ananto Ghosh</header>
           <p className={styles.description}>
             Everyday Coder. If you like what you read, follow me on twitter or
-            subscribe to the rss feed.
+            subscribe to the rss feed,{' '}
+            <span className={styles.thanks}>please and thank you.</span>
             <br />
-            <span className={styles.thanks}>Please and thank you.</span>
+            {/* <Link to="/work" className={styles.link}>My work.</Link>{' '} */}
+            <Link to="/link" className={styles.link}>Contact me.</Link>
           </p>
         </div>
         <div className={styles.social}>
