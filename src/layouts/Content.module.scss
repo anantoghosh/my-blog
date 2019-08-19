@@ -3,7 +3,7 @@
   li {
     font-size: calc(1rem + 0.1vw);
     line-height: 1.7em;
-    margin-bottom: 2em;
+    margin-bottom: 1.2em;
     code {
       padding: 0.2rem 0.5rem;
       margin: 0.5rem 0;
@@ -33,7 +33,6 @@
   h4,
   h5,
   h6 {
-    display: inline-block;
     position: relative;
     a {
       box-shadow: none;
@@ -49,5 +48,4 @@
       }
     }
   }
-
 }
