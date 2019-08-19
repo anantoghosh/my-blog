@@ -28,7 +28,7 @@ export default Blog;
 
 Blog.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string,
+    tag: PropTypes.any,
   }).isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({

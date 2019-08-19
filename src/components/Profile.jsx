@@ -21,7 +21,9 @@ const Profile = () => {
             <span className={styles.thanks}>please and thank you.</span>
             <br />
             {/* <Link to="/work" className={styles.link}>My work.</Link>{' '} */}
-            <Link to="/link" className={styles.link}>Contact me.</Link>
+            <Link to="/contact" className={styles.link}>
+              Contact me.
+            </Link>
           </p>
         </div>
         <div className={styles.social}>

@@ -117,7 +117,7 @@ export default SEO;
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  banner: PropTypes.string,
+  banner: PropTypes.any,
   pathname: PropTypes.string,
   article: PropTypes.bool,
 };

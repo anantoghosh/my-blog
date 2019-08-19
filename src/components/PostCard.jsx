@@ -17,7 +17,7 @@ const PostCard = ({
   <article className={`${styles.wrapper} ${className}`}>
     <Link to={path} className={styles.link}>
       <div className={styles.imageContainer}>
-        <Img fluid={cover} className={styles.image} />
+        <Img fluid={cover} className={styles.image} fadeIn />
       </div>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.info}>
