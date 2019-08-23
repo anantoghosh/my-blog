@@ -44,7 +44,7 @@ Blog.propTypes = {
       ),
     }),
     tagsGroup: PropTypes.shape({
-      group: PropTypes.arrayOf(PropTypes.string),
+      group: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
 };
