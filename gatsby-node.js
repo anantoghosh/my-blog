@@ -1,5 +1,32 @@
 const path = require('path');
 
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes, createFieldExtension } = actions;
+
+  createFieldExtension({
+    name: 'defaultFalse',
+    extend() {
+      return {
+        resolve(source, args, context, info) {
+          if (source[info.fieldName] == null) {
+            return false;
+          }
+          return source[info.fieldName];
+        },
+      };
+    },
+  });
+
+  createTypes(`
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      draft: Boolean @defaultFalse
+    }
+  `);
+};
+
 exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
@@ -12,6 +39,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
       graphql(`
         {
           postsRemark: allMarkdownRemark(
+            filter: { frontmatter: { draft: { eq: false } } }
             sort: { order: ASC, fields: [frontmatter___date] }
           ) {
             edges {
