@@ -53,7 +53,10 @@ exports.createPages = ({ graphql, actions, reporter }) => {
               }
             }
           }
-          tagsGroup: allMarkdownRemark(limit: 2000) {
+          tagsGroup: allMarkdownRemark(
+            filter: { frontmatter: { draft: { eq: false } } }
+            limit: 2000
+          ) {
             group(field: frontmatter___tags) {
               fieldValue
             }
