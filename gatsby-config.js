@@ -28,9 +28,8 @@ module.exports = {
               linkImagesToOriginal: true,
             },
           },
-          {
-            resolve: 'gatsby-remark-prismjs',
-          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },

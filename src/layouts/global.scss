@@ -20,6 +20,17 @@ h5 {
   font-family: $font-heading;
 }
 
+blockquote {
+  border-left: 10px solid #e8e8e8;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 7px;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
 #gatsby-focus-wrapper {
   display: flex;
   flex-direction: column;
@@ -86,5 +97,5 @@ h5 {
 }
 
 .gatsby-highlight {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
