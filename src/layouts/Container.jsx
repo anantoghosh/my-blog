@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import styles from './Container.module.scss';
 
 const Container = ({ children, className, center }) => (
-  <div className={`${className} ${styles.wrapper} ${styles.center}`}>{children}</div>
+  <div
+    className={`${className} ${styles.wrapper} ${center ? styles.center : ''}`}
+  >
+    {children}
+  </div>
 );
 
 export default Container;
