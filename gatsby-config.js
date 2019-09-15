@@ -34,12 +34,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'config/typography.js',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-sass',
       options: {
         implementation: require('sass'),
