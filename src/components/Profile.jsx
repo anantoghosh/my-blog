@@ -5,6 +5,8 @@ import logo from '../../static/logo/logo.png';
 
 import twitter from '../../static/twitter.svg';
 import github from '../../static/github.svg';
+import devto from '../../static/devto.svg';
+import medium from '../../static/medium.svg';
 import rss from '../../static/rss.svg';
 import { Link } from 'gatsby';
 
@@ -32,17 +34,23 @@ const Profile = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={twitter} alt="" className={styles.icon} />
+            <img src={twitter} alt="twitter logo" className={styles.icon} />
           </a>
           <a
             href="http://github.com/anantoghosh"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={github} alt="" className={styles.icon} />
+            <img src={github} alt="github logo" className={styles.icon} />
+          </a>
+          <a href="https://dev.to/anantoghosh" target="_blank" rel="noopener noreferrer">
+            <img src={devto} alt="dev.to logo" className={styles.icon} />
+          </a>
+          <a href="https://medium.com/@gho" target="_blank" rel="noopener noreferrer">
+            <img src={medium} alt="medium logo" className={styles.icon} />
           </a>
           <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-            <img src={rss} alt="" className={styles.icon} />
+            <img src={rss} alt="rss logo" className={styles.icon} />
           </a>
         </div>
       </div>
