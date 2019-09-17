@@ -2,7 +2,7 @@
 title: 'Type check regular JavaScript with Typescript'
 description: 'Get proper autocomplete, ts flow based type analysis, types definitions from d.ts files in your js files'
 path: '/type-check-regular-javascript-with-typescript'
-cover: '../default.jpg'
+cover: '../ts.png'
 date: '2019-09-15'
 tags: ['javascript', 'typescript', 'tips']
 ---
