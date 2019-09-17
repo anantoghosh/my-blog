@@ -67,6 +67,7 @@ module.exports = {
                 title
                 description
                 siteUrl
+                site_url: siteUrl
               }
             }
           }
@@ -79,6 +80,8 @@ module.exports = {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  feed_url: site.siteMetadata.siteUrl + '/rss.xml',
+                  site_url: site.siteMetadata.siteUrl,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
