@@ -148,4 +148,4 @@ const config = getConfig(); // config has the structure of the Webpack config ob
 ### The full list of JSDOC annotations
 
 All available annotations and techniques can be read here:  
-[https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)
+[Handbook: Type checking javascript files](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)
