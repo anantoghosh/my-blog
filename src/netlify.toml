@@ -1,1 +1,2 @@
-YARN_VERSION = "1.17.3"
+[build.environment]
+  YARN_VERSION = "1.17.3"
