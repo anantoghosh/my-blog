@@ -3,7 +3,7 @@ title: 'Start type checking your JavaScript without changing your code'
 description: 'Get proper autocomplete, ts flow based type analysis, types definitions from d.ts files in your js files'
 path: '/start-type-checking-your-javascript-without-changing-your-code'
 cover: '../ts.png'
-date: '2019-09-15'
+date: '2019-09-22'
 tags: ['javascript', 'typescript', 'tips']
 ---
 
