@@ -12,7 +12,9 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={'Home'} />
-      <Header title="Ananto Ghosh">Articles about simple tech</Header>
+      <Header title="Ananto Ghosh">
+        Everyday coder. Articles about simple stuff.
+      </Header>
       <section>
         <h2 className={styles.title}>Recent Articles</h2>
         <div className={styles.postWrapper}>

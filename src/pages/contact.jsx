@@ -1,17 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Header, PostCard, ContactForm } from 'components';
+import { Header, ContactForm } from 'components';
 import { Layout, Container } from 'layouts';
 
-import styles from './index.module.scss';
-
-const Index = () => {
+const Contact = () => {
   return (
     <Layout>
       <Helmet title={'Home'} />
-      <Header title="Contact">Articles about simple tech</Header>
+      <Header title="Contact"></Header>
       <Container>
         <ContactForm />
       </Container>
@@ -19,6 +15,6 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Contact;
 
-Index.propTypes = {};
+Contact.propTypes = {};
