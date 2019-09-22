@@ -1,7 +1,7 @@
 ---
-title: 'Type check regular JavaScript with Typescript'
+title: 'Start type checking your JavaScript without changing your code'
 description: 'Get proper autocomplete, ts flow based type analysis, types definitions from d.ts files in your js files'
-path: '/type-check-regular-javascript-with-typescript'
+path: '/start-type-checking-your-javascript-without-changing-your-code'
 cover: '../ts.png'
 date: '2019-09-15'
 tags: ['javascript', 'typescript', 'tips']
@@ -29,7 +29,10 @@ A key benefit of this approach is that you can add type checking gradually, per 
 
 ## Enable JavaScript type checking
 
-> - If you are using Visual Studio Code then it will start providing autocompletion and Typescript checks in the editor as well.  
+Install typescript  
+`npm install -g typescript`
+
+> - Visual Studio Code can do the checks without needing to install typescript separately.  
 > - On other editors, you may need to configure the Typescript language server to include js files.
 > - Otherwise, use the tsc cli: `tsc filename.js --allowJs --checkJs --noEmit`.
 
