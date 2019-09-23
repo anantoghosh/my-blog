@@ -39,7 +39,6 @@ exports.createPages = ({ graphql, actions, reporter }) => {
       graphql(`
         {
           postsRemark: allMarkdownRemark(
-            filter: { frontmatter: { draft: { eq: false } } }
             sort: { order: ASC, fields: [frontmatter___date] }
           ) {
             edges {
