@@ -56,6 +56,7 @@ module.exports = {
         icon: config.favicon,
       },
     },
+    'gatsby-plugin-remove-fingerprints',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
