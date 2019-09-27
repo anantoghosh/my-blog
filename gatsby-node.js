@@ -44,6 +44,7 @@ exports.createPages = ({ graphql, actions, reporter }) => {
             edges {
               node {
                 frontmatter {
+                  draft
                   path
                   title
                   tags
@@ -96,9 +97,22 @@ exports.createPages = ({ graphql, actions, reporter }) => {
         //create posts
         posts.forEach(({ node }, index) => {
           const path = node.frontmatter.path;
-          const prev = index === 0 ? null : posts[index - 1].node;
-          const next =
-            index === posts.length - 1 ? null : posts[index + 1].node;
+          let prev = null;
+          let next = null;
+
+          console.log(node, index);
+
+          if (index !== 0 && posts[index - 1].node.frontmatter.draft !== true) {
+            prev = posts[index - 1].node;
+          }
+
+          if (
+            index !== posts.length - 1 &&
+            posts[index + 1].node.frontmatter.draft !== true
+          ) {
+            next = posts[index + 1].node;
+          }
+
           createPage({
             path,
             component: postTemplate,
